@@ -1,0 +1,22 @@
+{
+  "name": "harald",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/vue": "^3.0.0",
+    "@tinacms/cli": "^1.5.29",
+    "astro": "^3.0.12",
+    "tinacms": "^1.5.20",
+    "vue": "^3.2.30"
+  },
+  "volta": {
+    "node": "20.6.1"
+  }
+}

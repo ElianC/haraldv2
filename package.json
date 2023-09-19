@@ -18,5 +18,8 @@
   },
   "volta": {
     "node": "20.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.6.2"
   }
 }

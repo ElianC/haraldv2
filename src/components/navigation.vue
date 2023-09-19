@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { BASE_PATH }from '../../config/astro'
 
 const isMenuOpen = ref<boolean>(false)
 
@@ -10,15 +11,15 @@ const openMenu = (action: boolean) => {
 const menuLinks = [
   {
     name: 'Home',
-    url: '/'
+    url: `${BASE_PATH}/`,
   },
   {
     name: 'About',
-    url: '/about'
+    url: `${BASE_PATH}/about`,
   },
   {
     name: 'Blog',
-    url: '/blog'
+    url: `${BASE_PATH}/blog`
   }
 ]
 </script>

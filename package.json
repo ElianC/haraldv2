@@ -3,9 +3,9 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "tinacms dev -c 'astro dev'",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "pnpm tinacms build && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -17,9 +17,10 @@
     "vue": "^3.2.30"
   },
   "volta": {
-    "node": "20.6.1"
+    "node": "18.18.0"
   },
   "devDependencies": {
-    "@types/node": "^20.6.2"
+    "@types/node": "^20.6.2",
+    "pnpm": "^8.7.6"
   }
 }

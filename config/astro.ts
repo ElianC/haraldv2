@@ -1,1 +1,0 @@
-export const BASE_PATH = "/haraldv2";

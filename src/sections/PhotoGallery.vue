@@ -36,10 +36,12 @@ const fetchGalleries = async () => {
   <div class="flex flex-wrap gap-2">
     <div
       v-for="photo of photos"
+      :key="photo.id"
     >
       <p>{{ photo.title }}</p>
       <img
-        :src="`/public/${photo.imgSrc}`"
+        v-if="photo.imgSrc"
+        :src="photo.imgSrc"
         :alt="photo.body"
       />
     </div>

@@ -37,6 +37,7 @@ const fetchGalleries = async () => {
     <div
       v-for="photo of photos"
       :key="photo.id"
+      class="lg:max-w-[30vw]"
     >
       <p>{{ photo.title }}</p>
       <img

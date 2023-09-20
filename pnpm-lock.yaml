@@ -31,9 +31,6 @@ devDependencies:
   '@types/node':
     specifier: ^20.6.2
     version: 20.6.2
-  pnpm:
-    specifier: ^8.7.6
-    version: 8.7.6
 
 packages:
 
@@ -11103,12 +11100,6 @@ packages:
     dependencies:
       find-up: 4.1.0
     dev: false
-
-  /pnpm@8.7.6:
-    resolution: {integrity: sha512-ZJ/LpDy+IGYpCPYo2INfnw2MopUOTHQ3HcnhbiSqVLtV5rTmsrbFHe4i35ITLpcgvIWptWbzUTZ8efDYXWpFew==}
-    engines: {node: '>=16.14'}
-    hasBin: true
-    dev: true
 
   /popmotion@11.0.3:
     resolution: {integrity: sha512-Y55FLdj3UxkR7Vl3s7Qr4e9m0onSnP8W7d/xQLsoJM40vs6UKHFdygs6SWryasTZYqugMjm3BepCF4CWXDiHgA==}

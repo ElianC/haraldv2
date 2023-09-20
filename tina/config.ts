@@ -40,6 +40,31 @@ export default defineConfig({
           },
         ],
       },
+      {
+        name: "gallery",
+        label: "Photo Gallery",
+        path: "content/gallery",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Title",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Body",
+            isBody: true,
+          },
+          {
+            type: 'image',
+            label: 'Hero image',
+            name: 'imgSrc',
+          },
+        ],
+      },
     ],
   },
 });

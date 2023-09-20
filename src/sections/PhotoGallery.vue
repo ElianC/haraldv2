@@ -23,7 +23,7 @@ const fetchGalleries = async () => {
       edge?.node ? {
         id: edge.node.id,
         title: edge.node.title,
-        body: edge.node.title,
+        body: edge.node.body,
         imgSrc: edge.node.imgSrc,
       } as Photo : undefined
     )

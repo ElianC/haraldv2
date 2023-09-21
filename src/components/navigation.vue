@@ -21,7 +21,7 @@ const menuLinks = [
 
 <template>
   <div>
-    <nav class="flex justify-between items-end p-4 container mx-auto uppercase">
+    <nav class="flex justify-between items-end p-4 container mx-auto uppercase z-10 text-white">
       <a class="text-xl" href="/">John Doe</a>
       <ul v-if="true" class="flex gap-8">
         <li v-for="link of menuLinks" :key="link.url">

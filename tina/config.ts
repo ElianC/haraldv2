@@ -14,8 +14,8 @@ export default defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: 'uploads',
-      publicFolder: 'src/assets',
+      mediaRoot: 'src/assets/uploads',
+      publicFolder: '',
     },
   },
   // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
@@ -24,7 +24,7 @@ export default defineConfig({
       {
         name: 'gallery',
         label: 'Photo Gallery',
-        path: "src/content/pictures",
+        path: 'src/content/pictures',
         fields: [
           {
             type: 'string',

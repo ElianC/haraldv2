@@ -1,28 +1,40 @@
 ---
+import { getCollection } from "astro:content";
 import Layout from '../layouts/Layout.astro'
+import GalleryPicture from "../components/GalleryPicture.astro";
+const pictures = await getCollection("pictures");
 ---
 
 <Layout title="John Doe">
-  <main class="container mx-auto">
-    <h1 class="text-4xl text-white z-10">John Doe Personnal Website</h1>
+  <main>
 
-    <div>
+    <div class="grid">
+      <div class="col-start-1 row-start-1 z-10">
+        <h1 class="text-4xl text-white">John Doe Personnal Website</h1>
+      </div>
+
       <video
         loop
         autoplay
         muted
-        class="aspect-video absolute top-0 left-0 w-full h-full object-cover -z-10"
+        class="aspect-video col-start-1 row-start-1 w-full h-full object-cover"
         src="https://res.cloudinary.com/dw6nin1do/video/upload/v1695306239/HARALD_DUPLOUIS_-_DIRECTOR_OF_PHOTOGRAPHY_-_SHOWREEL_mmyjwu.mp4"
-      ></video>
-      <!-- <iframe
-        width="100%"
-        class="aspect-video"
-        src="https://www.youtube.com/embed/oJg6yT5nirg"
-        title="HARALD DUPLOUIS - DIRECTOR OF PHOTOGRAPHY - SHOWREEL"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      /> -->
+      />
+
+
     </div>
+
+    </div>
+    <div class="p-8">
+      <h2 class="text-3xl">Mes dernières Photos</h2>
+        <div class="flex flex-wrap justify-evenly gap-x-4 gap-y-12">
+          {pictures.map((picture) => (
+            <GalleryPicture
+              imgSrc={picture.data.imgSrc}
+              alt={picture.data.alt}
+            />
+          ))}
+        </div>
+      </div>
   </main>
 </Layout>

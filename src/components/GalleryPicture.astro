@@ -1,0 +1,14 @@
+---
+import { Image } from 'astro:assets';
+
+const { imgSrc, alt } = Astro.props;
+
+const image = import(`../assets/${imgSrc}`);
+---
+
+<Image
+    src={image}
+    alt={alt}
+    class="w-full h-auto sm:h-[30svh] sm:w-auto min-h-80"
+    densities={[1.5, 2]}
+/>

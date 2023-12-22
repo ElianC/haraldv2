@@ -24,7 +24,7 @@ export default defineConfig({
       {
         name: 'gallery',
         label: 'Photo Gallery',
-        path: 'content/gallery',
+        path: "src/content/pictures",
         fields: [
           {
             type: 'string',

@@ -15,14 +15,24 @@ permissions:
   id-token: write
 
 jobs:
-  clean:
-    - uses: actions/checkout@v4
-    - name: Use Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20.x'
-    - run: npm run prettier
-build:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+      - run: npm install
+      - name: Run Prettier Formatter
+        run: npm run format
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Apply formatting changes
+          branch: ${{ github.head_ref }}
+
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout your repository using git
@@ -34,7 +44,6 @@ build:
           node-version: 18.18.0
           package-manager: pnpm
           pnpm-version: 8.7.6
-
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -45,8 +54,3 @@ build:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
-        with:
-          path: .
-          node-version: 18.18.0
-          package-manager: pnpm
-          pnpm-version: 8.7.6

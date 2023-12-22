@@ -1,6 +1,6 @@
-import { defineConfig } from "tinacms";
+import { defineConfig } from 'tinacms'
 
-const branch = "main";
+const branch = 'main'
 
 export default defineConfig({
   branch,
@@ -9,62 +9,44 @@ export default defineConfig({
   token: process.env.TINA_TOKEN,
 
   build: {
-    outputFolder: "admin",
-    publicFolder: "public",
+    outputFolder: 'admin',
+    publicFolder: 'public',
   },
   media: {
     tina: {
-      mediaRoot: "",
-      publicFolder: "public",
+      mediaRoot: 'uploads',
+      publicFolder: 'public',
     },
   },
+  // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
   schema: {
     collections: [
       {
-        name: "post",
-        label: "Posts",
-        path: "content/posts",
+        name: 'gallery',
+        label: 'Photo Gallery',
+        path: 'content/gallery',
         fields: [
           {
-            type: "string",
-            name: "title",
-            label: "Title",
+            type: 'string',
+            name: 'title',
+            label: 'Title',
             isTitle: true,
             required: true,
           },
           {
-            type: "rich-text",
-            name: "body",
-            label: "Body",
-            isBody: true,
-          },
-        ],
-      },
-      {
-        name: "gallery",
-        label: "Photo Gallery",
-        path: "content/gallery",
-        fields: [
-          {
-            type: "string",
-            name: "title",
-            label: "Title",
-            isTitle: true,
+            type: 'string',
+            name: 'alt',
+            label: 'Description',
+            isBody: false,
             required: true,
-          },
-          {
-            type: "rich-text",
-            name: "body",
-            label: "Body",
-            isBody: true,
           },
           {
             type: 'image',
-            label: 'Hero image',
+            label: 'Picture',
             name: 'imgSrc',
           },
         ],
       },
     ],
   },
-});
+})

@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "tinacms dev -c 'astro dev' --datalayer-port 3001",
     "start": "astro dev",
-    "build": "pnpm tinacms build --datalayer-port 3001 && astro build",
+    "build": "pnpm tinacms build && astro build",
+    "build:local": "pnpm tinacms build --datalayer-port 3001 && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write . --plugin=prettier-plugin-astro"

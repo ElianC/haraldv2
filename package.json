@@ -8,8 +8,9 @@
     "build": "pnpm tinacms build && astro build",
     "build:local": "pnpm tinacms build --datalayer-port 3001 && astro build",
     "preview": "astro preview",
+    "format": "prettier --write . --plugin=prettier-plugin-astro",
     "astro": "astro",
-    "format": "prettier --write . --plugin=prettier-plugin-astro"
+    "prepare": "husky install"
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.0.3",
@@ -24,7 +25,12 @@
   },
   "devDependencies": {
     "@types/node": "^20.10.4",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
     "prettier": "^3.1.1",
     "prettier-plugin-astro": "^0.12.2"
+  },
+  "lint-staged": {
+    "format": "prettier --write . --plugin=prettier-plugin-astro"
   }
 }

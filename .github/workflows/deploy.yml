@@ -15,6 +15,10 @@ permissions:
   id-token: write
 
 jobs:
+  clean:
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm run prettier
   build:
     runs-on: ubuntu-latest
     steps:

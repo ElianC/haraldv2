@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config'
+import { defineConfig,passthroughImageService } from 'astro/config'
 // import { BASE_PATH }from './config/astro'
 
 import tailwind from '@astrojs/tailwind'
@@ -7,4 +7,7 @@ import tailwind from '@astrojs/tailwind'
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://eliancaby.github.io',
+  image: {
+    service: passthroughImageService(),
+  },
 })

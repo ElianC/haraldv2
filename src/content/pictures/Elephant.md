@@ -1,6 +1,5 @@
 ---
 title: Elephant
 alt: Elephnat
-imgSrc: /uploads/elephant.avif
+imgSrc: /src/assets/uploads/elephant.avif
 ---
-

@@ -1,6 +1,5 @@
 ---
 title: Cinema
 alt: cinema
-imgSrc: /uploads/kal-visuals-0SD23QoYRSo-unsplash.jpg
+imgSrc: /src/assets/uploads/kal-visuals-0SD23QoYRSo-unsplash.jpg
 ---
-

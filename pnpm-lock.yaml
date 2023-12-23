@@ -14,9 +14,6 @@ dependencies:
   astro:
     specifier: ^4.0.5
     version: 4.0.5(@types/node@20.10.4)
-  fld-grd:
-    specifier: ^1.2.0
-    version: 1.2.0
   tailwindcss:
     specifier: ^3.4.0
     version: 3.4.0
@@ -8796,10 +8793,6 @@ packages:
   /flattie@1.1.0:
     resolution: {integrity: sha512-xU99gDEnciIwJdGcBmNHnzTJ/w5AT+VFJOu6sTB6WM8diOYNA3Sa+K1DiEBQ7XH4QikQq3iFW1U+jRVcotQnBw==}
     engines: {node: '>=8'}
-    dev: false
-
-  /fld-grd@1.2.0:
-    resolution: {integrity: sha512-iULfitFUDLS2j/KZq/ko5KRX4o7EFvUdQNN8094PhwpuEbqqa3CPjdS2157ti3ciF64aW+6qxmS4RGD3xqAtHw==}
     dev: false
 
   /follow-redirects@1.15.2:
